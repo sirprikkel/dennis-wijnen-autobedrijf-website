@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Werkplaats en APK keuring bij Dennis Wijnen Autobedrijf Ravenstein. RDW erkend, kundige monteurs, snelle service.">
+  <title>Werkplaats / APK — Dennis Wijnen Autobedrijf</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { primary: '#1E293B', secondary: '#334155', cta: '#DC2626', bg: '#F8FAFC', txt: '#0F172A' },
+        fontFamily: { display: ['Syncopate','sans-serif'], mono: ['Space Mono','monospace'] },
+      }}
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syncopate:wght@400;700&display=swap');
+    html { scroll-behavior: smooth; }
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.6s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+    .card-hover { transition: all 300ms ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px rgba(0,0,0,0.15); }
+  </style>
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="24258514-917b-4b56-84de-56c881fec220"></script>
+</head>
+<body class="bg-bg font-mono text-txt">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="cursor-pointer flex items-center gap-3">
+          <img src="images/logo.png" alt="Dennis Wijnen logo" class="h-10 md:h-12 w-auto">
+          <span class="font-display text-white text-xs md:text-sm tracking-wider hidden sm:block">DENNIS WIJNEN</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html" class="text-white/90 hover:text-white text-sm font-bold tracking-wide transition-colors duration-200 cursor-pointer">Home</a>
+          <a href="werkplaats.html" class="text-white text-sm font-bold tracking-wide cursor-pointer border-b-2 border-cta pb-1">Werkplaats/APK</a>
+          <a href="kentekenloket.html" class="text-white/90 hover:text-white text-sm font-bold tracking-wide transition-colors duration-200 cursor-pointer">Kentekenloket</a>
+          <a href="voorraad.html" class="text-white/90 hover:text-white text-sm font-bold tracking-wide transition-colors duration-200 cursor-pointer">Voorraad</a>
+          <a href="diensten.html" class="text-white/90 hover:text-white text-sm font-bold tracking-wide transition-colors duration-200 cursor-pointer">Diensten</a>
+          <a href="contact.html" class="bg-cta text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-red-700 transition-colors duration-200 cursor-pointer">Contact</a>
+        </div>
+        <button id="menuBtn" class="lg:hidden text-white cursor-pointer p-2 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-primary border-t border-white/10">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-white/80 text-sm py-2 cursor-pointer">Home</a>
+        <a href="werkplaats.html" class="block text-white font-bold text-sm py-2 cursor-pointer">Werkplaats/APK</a>
+        <a href="kentekenloket.html" class="block text-white/80 text-sm py-2 cursor-pointer">Kentekenloket</a>
+        <a href="voorraad.html" class="block text-white/80 text-sm py-2 cursor-pointer">Voorraad</a>
+        <a href="diensten.html" class="block text-white/80 text-sm py-2 cursor-pointer">Diensten</a>
+        <a href="contact.html" class="block bg-cta text-white text-center font-bold text-sm py-3 rounded-lg cursor-pointer">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-20 md:pt-24">
+    <div class="relative h-64 md:h-96 overflow-hidden">
+      <img src="images/onderhoud.jpg" alt="Dennis Wijnen werkplaats" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent"></div>
+      <div class="absolute bottom-8 left-0 right-0">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <h1 class="font-display text-3xl md:text-5xl text-white font-bold tracking-wider">WERKPLAATS / APK</h1>
+          <p class="mt-2 text-white/70 text-sm">RDW erkend — kundige monteurs — snelle service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div class="reveal">
+          <h2 class="font-display text-xl md:text-2xl font-bold text-primary tracking-wider mb-6">ONDERHOUD & REPARATIE</h2>
+          <div class="space-y-4 text-secondary leading-relaxed">
+            <p>Wanneer u niet voor onverwachte verrassingen wilt komen te staan, zorg er dan voor dat u uw auto goed laat onderhouden. Kwalitatief en goed onderhoud aan uw auto zal er ook voor zorgen dat u motorisch langer plezier van uw auto kunt hebben.</p>
+            <p>De meest voorkomende soorten onderhoud aan uw auto zijn een grote of kleine service- / onderhoudsbeurt.</p>
+            <p>Standaard verversen wij de motorolie bij iedere grote of kleine service- / onderhoudsbeurt aan uw auto. Afhankelijk van onder andere het type, merk en kilometerstand van het voertuig worden er diverse uitgebreide controles uitgevoerd en onderdelen als oliefilter, luchtfilter, interieurfilter, bougies etc. op de voorgeschreven tijdstippen vervangen.</p>
+          </div>
+        </div>
+        <div class="reveal" style="transition-delay: 0.15s;">
+          <h2 class="font-display text-xl md:text-2xl font-bold text-primary tracking-wider mb-6">MEER MOGELIJKHEDEN</h2>
+          <div class="space-y-4 text-secondary leading-relaxed">
+            <p>Naast deze twee soorten zijn er nog tal van mogelijkheden, hierbij kunt u denken aan periodieke (preventieve) zomer- en / of winterchecks. Wij onderhouden uw personen- / bestelauto volgens de voorgeschreven normen. Hierdoor weet u dat uw auto, na onderhoud in onze werkplaats, weer veilig de weg op kan.</p>
+            <p>Onze werkplaats is dusdanig ingericht, en voorzien van alle middelen, om de uitvoering van de meest uiteenlopende reparatie en vervangingswerkzaamheden aan uw auto te waarborgen. Tevens zijn onze monteurs zeer gedreven en kundig om uw personen- of bestelauto weer in top conditie te brengen.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diensten cards -->
+      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card-hover bg-white rounded-xl p-6 shadow-md text-center reveal">
+          <div class="w-12 h-12 bg-cta/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-display text-xs font-bold text-primary tracking-wider">APK KEURING</h3>
+          <p class="mt-2 text-secondary text-xs">RDW erkend APK station</p>
+        </div>
+        <div class="card-hover bg-white rounded-xl p-6 shadow-md text-center reveal" style="transition-delay:0.1s">
+          <div class="w-12 h-12 bg-cta/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-display text-xs font-bold text-primary tracking-wider">AIRCO SERVICE</h3>
+          <p class="mt-2 text-secondary text-xs">Airco station beschikbaar</p>
+        </div>
+        <div class="card-hover bg-white rounded-xl p-6 shadow-md text-center reveal" style="transition-delay:0.2s">
+          <div class="w-12 h-12 bg-cta/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-display text-xs font-bold text-primary tracking-wider">SCHADE-HERSTEL</h3>
+          <p class="mt-2 text-secondary text-xs">Professioneel schadeherstel</p>
+        </div>
+        <div class="card-hover bg-white rounded-xl p-6 shadow-md text-center reveal" style="transition-delay:0.3s">
+          <div class="w-12 h-12 bg-cta/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-display text-xs font-bold text-primary tracking-wider">SNEL & KUNDIG</h3>
+          <p class="mt-2 text-secondary text-xs">Gedreven monteurs</p>
+        </div>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="mt-16 flex flex-wrap items-center justify-center gap-8 reveal">
+        <img src="images/rdw-erkend.png" alt="RDW Erkend Bedrijf" class="h-20 w-auto" loading="lazy">
+        <img src="images/apk.png" alt="APK Keuring" class="h-20 w-auto" loading="lazy">
+        <img src="images/apk-sticker.png" alt="APK Sticker" class="h-16 w-auto" loading="lazy">
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 text-center reveal">
+        <a href="tel:0612853390" class="inline-flex items-center gap-2 bg-cta text-white px-8 py-4 rounded-lg font-bold text-sm tracking-wide hover:bg-red-700 transition-all duration-300 cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          MAAK EEN AFSPRAAK: 06 128 533 90
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary py-16">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <img src="images/logo.png" alt="Dennis Wijnen logo" class="h-12 w-auto mb-4">
+          <p class="text-white/60 text-sm">Universeel autobedrijf in Ravenstein.</p>
+        </div>
+        <div>
+          <h4 class="font-display text-sm font-bold text-white tracking-wider mb-4">DIENSTEN</h4>
+          <ul class="space-y-2">
+            <li><a href="werkplaats.html" class="text-white/60 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Werkplaats / APK</a></li>
+            <li><a href="kentekenloket.html" class="text-white/60 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Kentekenloket</a></li>
+            <li><a href="voorraad.html" class="text-white/60 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Occasions</a></li>
+            <li><a href="diensten.html" class="text-white/60 hover:text-white text-sm transition-colors duration-200 cursor-pointer">Overige diensten</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-sm font-bold text-white tracking-wider mb-4">CONTACT</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li>Het Kolkske 47, 5371 MX Ravenstein</li>
+            <li><a href="tel:0612853390" class="hover:text-white transition-colors duration-200 cursor-pointer">06 128 533 90</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-sm font-bold text-white tracking-wider mb-4">OPENINGSTIJDEN</h4>
+          <ul class="space-y-1 text-white/60 text-sm">
+            <li class="flex justify-between"><span>Ma - Vr</span><span>08:30 — 17:30</span></li>
+            <li class="flex justify-between"><span>Zaterdag</span><span>Op afspraak</span></li>
+            <li class="flex justify-between"><span>Zondag</span><span>Gesloten</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/10 text-center text-white/40 text-xs">
+        <p>&copy; 2025 Dennis Wijnen Autobedrijf. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer" target="_blank" rel="noopener">Code Lieshout</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); }); }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
